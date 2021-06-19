@@ -6,9 +6,15 @@ spring:
     name: user-service
 
 # Eureka 등록 및 외부 검색 허용 설정
+# Eureka Server 의 기본 표기법 = ${PORT}:${Spring.application.name}:${yml의 port} 로 인스턴스를 표기한다
+# Random Port 로 기동할 경우 0 port 에 대해서만 표기가 된다.. => 이는 표기법에 대한 문제
+# instance-id 에 대한 설정이 필요함
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka # Eureka 서버 정보
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+
