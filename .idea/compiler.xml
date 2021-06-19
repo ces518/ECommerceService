@@ -7,14 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="UserService" />
+        <module name="FirstService" />
+        <module name="ZuulService" />
         <module name="ECommerceService" />
+        <module name="UserService" />
+        <module name="SecondService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FirstService" options="-parameters" />
+      <module name="SecondService" options="-parameters" />
       <module name="UserService" options="-parameters" />
+      <module name="ZuulService" options="-parameters" />
     </option>
   </component>
 </project>
