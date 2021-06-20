@@ -10,14 +10,14 @@ eureka:
 spring:
   application:
     name: apigateway-service
-  cloud:
-    gateway:
-      routes:
-        - id: first-service
-          uri: http://localhost:8081/
-          predicates:
-            - Path=/first-serivce/** # http://localhost:8081/first-serivce/** 형태로 그대로 전달됨을 주의..
-        - id: second-service
-          uri: http://localhost:8082/
-          predicates:
-            - Path=/second-serivce/**
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: first-service
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/first-serivce/** # http://localhost:8081/first-serivce/** 형태로 그대로 전달됨을 주의..
+#        - id: second-service
+#          uri: http://localhost:8082/
+#          predicates:
+#            - Path=/second-serivce/**
