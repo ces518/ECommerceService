@@ -13,4 +13,9 @@ public class FirstServiceController {
 	public String welcome(@RequestHeader("first-request") String header) {
 		return "Welcome to the First Service";
 	}
+
+	@GetMapping("check")
+	public String check() {
+		return "Hi, there. This is a message from First Service";
+	}
 }

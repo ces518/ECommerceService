@@ -11,11 +11,5 @@ D
 FirstService/HELP.md,7/8/789b789b57d2f4a35caf9405df66cbb7ab1178a7
 E
 SecondService/HELP.md,7/d/7dd57c5ef3b059154db16d1d99c2137e8eb561e6
-D
-FirstService/pom.xml,1/6/16164a44a5970436dce300f0954de5528d5f7af8
-E
-SecondService/pom.xml,7/e/7eadd4fa7f2699c07d7e0d94ae6556efbea7233e
 C
 ZuulService/HELP.md,a/a/aa56a61d2805cbe13e36595197035de963eea86f
-C
-ZuulService/pom.xml,e/6/e695c04c1b57bbdcfb7bef95d113a6dcafbf3c2b
