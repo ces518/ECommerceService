@@ -12,11 +12,13 @@
         <module name="ECommerceService" />
         <module name="UserService" />
         <module name="SecondService" />
+        <module name="APIGatewayService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIGatewayService" options="-parameters" />
       <module name="FirstService" options="-parameters" />
       <module name="SecondService" options="-parameters" />
       <module name="UserService" options="-parameters" />
