@@ -6,6 +6,7 @@ import me.june.userservice.user.dto.UserRequest;
 import me.june.userservice.user.entity.User;
 import me.june.userservice.user.repository.UserRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,13 +17,14 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class UserService {
 	private final UserRepository repository;
+	private final PasswordEncoder passwordEncoder;
 	private final ModelMapper mapper;
 
 	@Transactional
 	public UserDto createUser(final UserRequest request) {
 		User entity = mapper.map(request, User.class);
 		entity.setUserId(UUID.randomUUID().toString());
-		entity.setEncryptedPwd("encrypted password");
+		entity.setEncryptedPwd(passwordEncoder.encode(request.getPwd()));
 		User savedUser = repository.save(entity);
 		return mapper.map(savedUser, UserDto.class);
 	}
