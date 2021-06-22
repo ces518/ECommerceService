@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FirstService" />
-        <module name="ZuulService" />
-        <module name="ECommerceService" />
         <module name="UserService" />
         <module name="SecondService" />
+        <module name="CatalogService" />
+        <module name="ZuulService" />
+        <module name="ECommerceService" />
         <module name="APIGatewayService" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="APIGatewayService" options="-parameters" />
+      <module name="CatalogService" options="-parameters" />
       <module name="FirstService" options="-parameters" />
       <module name="SecondService" options="-parameters" />
       <module name="UserService" options="-parameters" />
