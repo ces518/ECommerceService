@@ -28,4 +28,14 @@ public class UserService {
 		User savedUser = repository.save(entity);
 		return mapper.map(savedUser, UserDto.class);
 	}
+
+	public UserDto getUserById(String userId) {
+		User user = repository.findByUserId(userId)
+				.orElseThrow(RuntimeException::new);
+		return mapper.map(user, UserDto.class);
+	}
+
+	public Iterable<User> getUsers() {
+		return repository.findAll();
+	}
 }

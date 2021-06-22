@@ -87,7 +87,5 @@ I
 KFirstService/src/main/java/me/june/firstservice/FirstServiceController.java,1/d/1dd6e4687c9b081149d35408a59cfcb6e8a3a3a4
 |
 LFirstService/src/main/java/me/june/firstservice/FirstServiceApplication.java,4/6/46baf22655afbeb4f73d41abcf9281a454452fa9
-Å
-QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.java,a/b/ab783ba0d6b20de60a67e61c6f36adb28bfc835e
 s
 CUserService/src/main/java/me/june/userservice/user/entity/User.java,5/b/5b1d529b2fb0ba53996a9908e998874670e84feb
