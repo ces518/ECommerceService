@@ -37,4 +37,8 @@ spring:
 #            - AddRequestHeader=second-request, second-request-header
 #            - AddResponseHeader=second-response, second-response-reader
             - CustomFilter
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
 
