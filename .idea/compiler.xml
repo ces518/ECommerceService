@@ -13,6 +13,7 @@
         <module name="CatalogService" />
         <module name="ZuulService" />
         <module name="ECommerceService" />
+        <module name="OrderService" />
         <module name="APIGatewayService" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,7 @@
       <module name="APIGatewayService" options="-parameters" />
       <module name="CatalogService" options="-parameters" />
       <module name="FirstService" options="-parameters" />
+      <module name="OrderService" options="-parameters" />
       <module name="SecondService" options="-parameters" />
       <module name="UserService" options="-parameters" />
       <module name="ZuulService" options="-parameters" />
