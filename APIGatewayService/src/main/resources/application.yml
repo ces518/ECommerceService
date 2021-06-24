@@ -37,10 +37,34 @@ spring:
 #            - AddRequestHeader=second-request, second-request-header
 #            - AddResponseHeader=second-response, second-response-reader
             - CustomFilter
-        - id: user-service
+#        - id: user-service
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path=/user-service/**
+        - id: user-service # 로그인 요청
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/login
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service # 회원가입
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/users
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service # 로그인/회원가입 이후
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user-service/**
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:

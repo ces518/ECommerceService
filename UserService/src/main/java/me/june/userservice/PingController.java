@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PingController {
 	private final Environment env;
 
-	@GetMapping("/user-service/health_check")
+	@GetMapping("/health_check")
 	public String healthCheck() {
 		return String.format("It's Working in User Service", env.getProperty("local.server.port"));
 	}
