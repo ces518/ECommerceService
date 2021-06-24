@@ -99,8 +99,6 @@ y
 IUserService/src/main/java/me/june/userservice/user/dto/ResponseOrder.java,e/3/e3f73a8d191ce79c743fed0a4d34f52f226c4dfe
 x
 HUserService/src/main/java/me/june/userservice/user/dto/ResponseUser.java,9/7/9748ae2b53bca5f8301dd0960a8c6a57b4cd5c61
-C
-UserService/pom.xml,f/f/ffddcbafce9a6aa210161d0474661eebdc6c48b5
 F
 CatalogService/HELP.md,e/f/ef081bfcd649e4606801964ee7faeb69af1c2266
 I

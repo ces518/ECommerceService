@@ -53,4 +53,10 @@ public class UserService implements UserDetailsService {
 				new ArrayList<>()
 		);
 	}
+
+	public UserDto getUserDetailsByEmail(String email) {
+		User user = repository.findByEmail(email)
+				.orElseThrow(() -> new UsernameNotFoundException(email));
+		return mapper.map(user, UserDto.class);
+	}
 }
