@@ -79,10 +79,6 @@ D
 FirstService/pom.xml,1/6/16164a44a5970436dce300f0954de5528d5f7af8
 Ç
 RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/CustomFilter.java,3/b/3b30e28bd959a0f58942215cc36b7f34a9db79ba
-Ç
-RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/GlobalFilter.java,8/f/8f9d5f556c7782696cfc37843282580cb5fe6c5a
-I
-APIGatewayService/pom.xml,0/6/068a445cf463676b351d5dbac7fa835143a2bb23
 {
 KFirstService/src/main/java/me/june/firstservice/FirstServiceController.java,1/d/1dd6e4687c9b081149d35408a59cfcb6e8a3a3a4
 |
@@ -163,3 +159,11 @@ LOrderService/src/main/java/me/june/orderservice/OrderServiceApplication.java,3
 QOrderService/src/test/java/me/june/orderservice/OrderServiceApplicationTests.java,3/1/315475e39fc8490bed8a7da55696ea3c29a01a5c
 D
 OrderService/pom.xml,1/2/12abbeb2e5453dbf79241135f537213dffc9bbfa
+y
+IUserService/src/main/java/me/june/userservice/UserServiceApplication.java,9/e/9e755e918f4e37bbccb733c82257fe17a7371ee6
+x
+HUserService/src/main/java/me/june/userservice/user/dto/RequestLogin.java,7/0/70e03d42bf03ac364d578736fdff56593088bbe1
+Å
+QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.java,a/b/ab783ba0d6b20de60a67e61c6f36adb28bfc835e
+{
+KUserService/src/main/java/me/june/userservice/config/WebSecurityConfig.java,1/0/10bffcc8bd109291e6770dadbd19cb5444e738f2

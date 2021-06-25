@@ -65,6 +65,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter # 회원가입 , 로그인을 제외한 나머지 요청의 경우 Jwt Token Validation 을 수행한다.
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
@@ -73,3 +74,7 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/order-service/**
+
+token:
+  expiration_time: 86400000
+  secret: user_token
