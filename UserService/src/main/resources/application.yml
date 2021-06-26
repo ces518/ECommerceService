@@ -39,3 +39,10 @@ greeting:
 #token:
 #  expiration_time: 86400000
 #  secret: user_token
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans # Actuator 를 활성화 시킬 End-Point 설정
+

@@ -161,8 +161,6 @@ x
 HUserService/src/main/java/me/june/userservice/user/dto/RequestLogin.java,7/0/70e03d42bf03ac364d578736fdff56593088bbe1
 Å
 QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.java,a/b/ab783ba0d6b20de60a67e61c6f36adb28bfc835e
-{
-KUserService/src/main/java/me/june/userservice/config/WebSecurityConfig.java,1/0/10bffcc8bd109291e6770dadbd19cb5444e738f2
 Ç
 RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/GlobalFilter.java,8/f/8f9d5f556c7782696cfc37843282580cb5fe6c5a
 è
