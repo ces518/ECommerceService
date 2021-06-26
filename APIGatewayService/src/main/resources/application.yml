@@ -57,6 +57,14 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service # Actuator 를 위한 처리
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/actuator/**
+            - Method=GET,POST
+          filters:
+            - RemoveRequestHeader=Cookie # 매번 새로운요청으로 인식하기 위해 Cookie 제거
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
         - id: user-service # 로그인/회원가입 이후
           uri: lb://USER-SERVICE
           predicates:
@@ -75,6 +83,13 @@ spring:
           predicates:
             - Path=/order-service/**
 
-token:
-  expiration_time: 86400000
-  secret: user_token
+#token:
+#  expiration_time: 86400000
+#  secret: user_token
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace # HttpTracing
