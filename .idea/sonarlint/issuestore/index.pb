@@ -167,3 +167,13 @@ HUserService/src/main/java/me/june/userservice/user/dto/RequestLogin.java,7/0/7
 QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.java,a/b/ab783ba0d6b20de60a67e61c6f36adb28bfc835e
 {
 KUserService/src/main/java/me/june/userservice/config/WebSecurityConfig.java,1/0/10bffcc8bd109291e6770dadbd19cb5444e738f2
+Ç
+RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/GlobalFilter.java,8/f/8f9d5f556c7782696cfc37843282580cb5fe6c5a
+C
+UserService/pom.xml,f/f/ffddcbafce9a6aa210161d0474661eebdc6c48b5
+v
+FUserService/src/main/java/me/june/userservice/user/UserController.java,9/5/9572d13bfaa1a8f7a2520ee9a0744c11c1161e67
+q
+AUserService/src/main/java/me/june/userservice/PingController.java,e/5/e51ef57f0b9ace5daf7ef1f624a283adbe2ffb9a
+è
+_APIGatewayService/src/main/java/me/june/apigatewayservice/filter/AuthorizationHeaderFilter.java,8/8/88c4e9476886eafd0de957c95630a4f79114204e

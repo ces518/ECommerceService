@@ -13,6 +13,7 @@
         <module name="CatalogService" />
         <module name="ZuulService" />
         <module name="ECommerceService" />
+        <module name="ConfigServer" />
         <module name="OrderService" />
         <module name="APIGatewayService" />
       </profile>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="APIGatewayService" options="-parameters" />
       <module name="CatalogService" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
       <module name="FirstService" options="-parameters" />
       <module name="OrderService" options="-parameters" />
       <module name="SecondService" options="-parameters" />
