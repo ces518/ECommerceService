@@ -2,9 +2,9 @@ server:
   port: 0 # 포트를 0번으로 지정하면 가용가능한 범위 내에서 랜덤한 포트로 실행됨
 
 spring:
-  cloud:
-    bootstrap:
-      enabled: true
+#  cloud:
+#    bootstrap:
+#      enabled: true
   application:
     name: user-service
   h2:
