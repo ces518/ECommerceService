@@ -25,8 +25,6 @@ F
 APIGatewayService/mvnw,2/d/2d788304b0d11fc3c683ab1e0a6699151cb80ef8
 J
 APIGatewayService/mvnw.cmd,2/c/2caea66bfad62c04c7b535e366ebdec58e12ee76
-ã
-[APIGatewayService/src/main/java/me/june/apigatewayservice/ApiGatewayServiceApplication.java,e/2/e24f69a71a7c9cfb0d6151152a44a74854b37fc4
 G
 FirstService/.gitignore,2/9/294a4aeb41446298aa8d4f8aa75b08d06b0ffaca
 H
@@ -159,8 +157,6 @@ LOrderService/src/main/java/me/june/orderservice/OrderServiceApplication.java,3
 QOrderService/src/test/java/me/june/orderservice/OrderServiceApplicationTests.java,3/1/315475e39fc8490bed8a7da55696ea3c29a01a5c
 D
 OrderService/pom.xml,1/2/12abbeb2e5453dbf79241135f537213dffc9bbfa
-y
-IUserService/src/main/java/me/june/userservice/UserServiceApplication.java,9/e/9e755e918f4e37bbccb733c82257fe17a7371ee6
 x
 HUserService/src/main/java/me/june/userservice/user/dto/RequestLogin.java,7/0/70e03d42bf03ac364d578736fdff56593088bbe1
 Å
@@ -169,11 +165,5 @@ QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.ja
 KUserService/src/main/java/me/june/userservice/config/WebSecurityConfig.java,1/0/10bffcc8bd109291e6770dadbd19cb5444e738f2
 Ç
 RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/GlobalFilter.java,8/f/8f9d5f556c7782696cfc37843282580cb5fe6c5a
-C
-UserService/pom.xml,f/f/ffddcbafce9a6aa210161d0474661eebdc6c48b5
-v
-FUserService/src/main/java/me/june/userservice/user/UserController.java,9/5/9572d13bfaa1a8f7a2520ee9a0744c11c1161e67
-q
-AUserService/src/main/java/me/june/userservice/PingController.java,e/5/e51ef57f0b9ace5daf7ef1f624a283adbe2ffb9a
 è
 _APIGatewayService/src/main/java/me/june/apigatewayservice/filter/AuthorizationHeaderFilter.java,8/8/88c4e9476886eafd0de957c95630a4f79114204e

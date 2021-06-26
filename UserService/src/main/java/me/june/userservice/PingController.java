@@ -12,6 +12,11 @@ public class PingController {
 
 	@GetMapping("/health_check")
 	public String healthCheck() {
-		return String.format("It's Working in User Service", env.getProperty("local.server.port"));
+		return String.format("It's Working in User Service %s" +
+						"token.secret = %s, token.expire = $s",
+				env.getProperty("local.server.port"),
+				env.getProperty("token.secret"),
+				env.getProperty("token.expiration_time")
+		);
 	}
 }
