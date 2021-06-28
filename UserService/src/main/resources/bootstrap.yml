@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       uri: http://127.0.0.1:8888
-      name: ecommerce
-  profiles:
-    active: dev
+      name: user-service # name 에 명시한 yml 파일을 fetch 해 온다.
+#  profiles:
+#    active: dev

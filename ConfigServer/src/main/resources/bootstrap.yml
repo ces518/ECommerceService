@@ -1,0 +1,2 @@
+encrypt:
+  key: abcdedfhijk1234 # encrypt key 추가, 해당 키가 존재해야 enc / dec 작업 수행이 가능함
