@@ -1,2 +1,6 @@
 encrypt:
-  key: abcdedfhijk1234 # encrypt key 추가, 해당 키가 존재해야 enc / dec 작업 수행이 가능함
+#  key: abcdedfhijk1234 # encrypt key 추가, 해당 키가 존재해야 enc / dec 작업 수행이 가능함
+  key-store:
+    location: file://${user.home}/work/keystore/apiEncryptionKey.jks
+    password: 1q2w3e4r
+    alias: apiEncryptionKey
