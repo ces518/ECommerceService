@@ -85,8 +85,6 @@ s
 CUserService/src/main/java/me/june/userservice/user/entity/User.java,5/b/5b1d529b2fb0ba53996a9908e998874670e84feb
 {
 KUserService/src/main/java/me/june/userservice/config/ModelMapperConfig.java,4/9/49f2dc039417f26c0afdf0811e0312d50c7d1f5d
-s
-CUserService/src/main/java/me/june/userservice/user/dto/UserDto.java,d/5/d56dcdaeeac9da6a71fced01fbb628af054f0004
 w
 GUserService/src/main/java/me/june/userservice/user/dto/UserRequest.java,4/2/42bd4b68c2970b43f17534122bec363de7b5bb60
 y
@@ -137,8 +135,6 @@ KOrderService/src/main/java/me/june/orderservice/order/dto/RequestOrder.java,0/
 LOrderService/src/main/java/me/june/orderservice/order/dto/ResponseOrder.java,a/6/a633ba8fac49802be2324981ee6b1cce78ff0f51
 w
 GOrderService/src/main/java/me/june/orderservice/order/dto/OrderDto.java,1/1/116018c398da6940e17943df2d15304e5c22f411
-z
-JOrderService/src/main/java/me/june/orderservice/order/OrderController.java,6/c/6c9ffc06f3ebdab23b203ac6fa370b3b7cc3d2be
 w
 GOrderService/src/main/java/me/june/orderservice/order/entity/Order.java,7/2/72fad8587af78490beacd5560c2ff1a56c42d110
 G
@@ -157,16 +153,12 @@ LOrderService/src/main/java/me/june/orderservice/OrderServiceApplication.java,3
 QOrderService/src/test/java/me/june/orderservice/OrderServiceApplicationTests.java,3/1/315475e39fc8490bed8a7da55696ea3c29a01a5c
 D
 OrderService/pom.xml,1/2/12abbeb2e5453dbf79241135f537213dffc9bbfa
-x
-HUserService/src/main/java/me/june/userservice/user/dto/RequestLogin.java,7/0/70e03d42bf03ac364d578736fdff56593088bbe1
 Å
 QUserService/src/main/java/me/june/userservice/user/repository/UserRepository.java,a/b/ab783ba0d6b20de60a67e61c6f36adb28bfc835e
 Ç
 RAPIGatewayService/src/main/java/me/june/apigatewayservice/filter/GlobalFilter.java,8/f/8f9d5f556c7782696cfc37843282580cb5fe6c5a
 è
 _APIGatewayService/src/main/java/me/june/apigatewayservice/filter/AuthorizationHeaderFilter.java,8/8/88c4e9476886eafd0de957c95630a4f79114204e
-|
-LUserService/src/main/java/me/june/userservice/auth/AuthenticationFilter.java,4/8/4822cd88adf5a4e39a6bd05dbd15a3d6f74c793e
 D
 ConfigServer/HELP.md,7/f/7fd8b852de85a9de9ba665369945f3c638f6fff0
 G
@@ -183,12 +175,6 @@ E
 ConfigServer/mvnw.cmd,2/c/2c35a18c18e5f3710f52e94873640f6e443c4771
 |
 LConfigServer/src/main/java/me/june/configserver/ConfigServerApplication.java,7/c/7caa905938e838906c859957f4cc21e717538805
-y
-IUserService/src/main/java/me/june/userservice/UserServiceApplication.java,9/e/9e755e918f4e37bbccb733c82257fe17a7371ee6
-{
-KUserService/src/main/java/me/june/userservice/user/service/UserService.java,1/a/1a1c6eb349cd4eccff50fbdb126ea4e309fcd815
-v
-FUserService/src/main/java/me/june/userservice/user/UserController.java,9/5/9572d13bfaa1a8f7a2520ee9a0744c11c1161e67
 {
 KUserService/src/main/java/me/june/userservice/config/WebSecurityConfig.java,1/0/10bffcc8bd109291e6770dadbd19cb5444e738f2
 q
