@@ -1,6 +1,7 @@
 package me.june.userservice.user.service;
 
 import lombok.RequiredArgsConstructor;
+import me.june.userservice.user.client.OrderServiceClient;
 import me.june.userservice.user.dto.ResponseOrder;
 import me.june.userservice.user.dto.UserDto;
 import me.june.userservice.user.dto.UserRequest;
@@ -34,6 +35,8 @@ public class UserService implements UserDetailsService {
 	private final RestTemplate restTemplate;
 	private final Environment env;
 
+	private final OrderServiceClient orderServiceClient;
+
 	@Transactional
 	public UserDto createUser(final UserRequest request) {
 		User entity = mapper.map(request, User.class);
@@ -48,6 +51,8 @@ public class UserService implements UserDetailsService {
 				.orElseThrow(RuntimeException::new);
 		UserDto userDto = mapper.map(user, UserDto.class);
 
+		/*
+		RestTemplate
 		String orderUrl = String.format(env.getProperty("order_service.url"), userId);
 		ResponseEntity<List<ResponseOrder>> ordersResponse = restTemplate.exchange(
 			orderUrl,
@@ -55,8 +60,12 @@ public class UserService implements UserDetailsService {
 			null,
 			new ParameterizedTypeReference<List<ResponseOrder>>() {} // Super Type Token
 		);
-
 		List<ResponseOrder> responseOrders = ordersResponse.getBody();
+		*/
+
+		// FeignClient
+		List<ResponseOrder> responseOrders = orderServiceClient.getOrders(userId);
+
 		userDto.setOrders(responseOrders);
 		return userDto;
 	}
