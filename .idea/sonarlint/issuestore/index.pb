@@ -115,8 +115,6 @@ TCatalogService/src/main/java/me/june/catalogservice/catalog/dto/ResponseCatalog
 OCatalogService/src/main/java/me/june/catalogservice/catalog/dto/CatalogDto.java,2/f/2ffe44e0e6593f713b5ba2de6abc07af3e7b4724
 
 OCatalogService/src/main/java/me/june/catalogservice/catalog/entity/Catalog.java,4/c/4c7af621f716703c1e1cf65c5cfd4e6bb36df059
-‚
-RCatalogService/src/main/java/me/june/catalogservice/catalog/CatalogController.java,a/1/a148a286d9e7aca8fa75209aef4ff42c28cb298d
 w
 GCatalogService/src/main/java/me/june/catalogservice/PingController.java,a/b/abe2fa8a4dd7d4f3d0da8366a913e2ca3df9ece4
 ‚
