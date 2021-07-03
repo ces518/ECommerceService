@@ -1,6 +1,7 @@
 package me.june.orderservice.order;
 
 import lombok.RequiredArgsConstructor;
+import me.june.orderservice.kafka.KafkaProducer;
 import me.june.orderservice.order.dto.OrderDto;
 import me.june.orderservice.order.dto.RequestOrder;
 import me.june.orderservice.order.dto.ResponseOrder;
@@ -25,6 +26,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderController {
 	private final OrderService service;
+	private final KafkaProducer kafkaProducer;
 
 	@PostMapping("/{userId}/orders")
 	public ResponseEntity<ResponseOrder> createOrder(
@@ -38,6 +40,11 @@ public class OrderController {
 		service.createOrder(orderDto);
 
 		ResponseOrder responseOrder = mapper.map(orderDto, ResponseOrder.class);
+
+		/* Send To Kafka */
+		kafkaProducer.send("example-category-topic", orderDto);
+		/**/
+
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseOrder);
 	}
 
