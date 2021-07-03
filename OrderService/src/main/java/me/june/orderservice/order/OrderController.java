@@ -2,6 +2,7 @@ package me.june.orderservice.order;
 
 import lombok.RequiredArgsConstructor;
 import me.june.orderservice.kafka.KafkaProducer;
+import me.june.orderservice.kafka.OrderProducer;
 import me.june.orderservice.order.dto.OrderDto;
 import me.june.orderservice.order.dto.RequestOrder;
 import me.june.orderservice.order.dto.ResponseOrder;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/order-service")
@@ -27,6 +29,7 @@ import java.util.List;
 public class OrderController {
 	private final OrderService service;
 	private final KafkaProducer kafkaProducer;
+	private final OrderProducer orderProducer;
 
 	@PostMapping("/{userId}/orders")
 	public ResponseEntity<ResponseOrder> createOrder(
@@ -37,14 +40,19 @@ public class OrderController {
 
 		OrderDto orderDto = mapper.map(orderDetail, OrderDto.class);
 		orderDto.setUserId(userId);
-		service.createOrder(orderDto);
+		orderDto.setOrderId(UUID.randomUUID().toString());
+		orderDto.setTotalPrice(orderDto.getQty() * orderDetail.getUnitPrice());
 
-		ResponseOrder responseOrder = mapper.map(orderDto, ResponseOrder.class);
+		/* JPA
+			service.createOrder(orderDto);
+		*/
 
 		/* Send To Kafka */
 		kafkaProducer.send("example-catalog-topic", orderDto);
+		orderProducer.send("orders", orderDto);
 		/**/
 
+		ResponseOrder responseOrder = mapper.map(orderDto, ResponseOrder.class);
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseOrder);
 	}
 
