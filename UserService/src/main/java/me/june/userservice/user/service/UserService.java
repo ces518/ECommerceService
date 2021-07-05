@@ -8,6 +8,8 @@ import me.june.userservice.user.dto.UserRequest;
 import me.june.userservice.user.entity.User;
 import me.june.userservice.user.repository.UserRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
@@ -36,6 +38,7 @@ public class UserService implements UserDetailsService {
 	private final Environment env;
 
 	private final OrderServiceClient orderServiceClient;
+	private final CircuitBreakerFactory circuitBreakerFactory;
 
 	@Transactional
 	public UserDto createUser(final UserRequest request) {
@@ -63,8 +66,14 @@ public class UserService implements UserDetailsService {
 		List<ResponseOrder> responseOrders = ordersResponse.getBody();
 		*/
 
+
 		// FeignClient
-		List<ResponseOrder> responseOrders = orderServiceClient.getOrders(userId);
+//		List<ResponseOrder> responseOrders = orderServiceClient.getOrders(userId);
+
+		// CircuitBreaker
+		CircuitBreaker circuitbreaker = circuitBreakerFactory.create("circuitbreaker");
+		List<ResponseOrder> responseOrders = circuitbreaker.run(() -> orderServiceClient.getOrders(userId),
+			throwable -> new ArrayList<>());
 
 		userDto.setOrders(responseOrders);
 		return userDto;
