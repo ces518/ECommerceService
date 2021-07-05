@@ -1,6 +1,7 @@
 package me.june.userservice.user.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import me.june.userservice.user.client.OrderServiceClient;
 import me.june.userservice.user.dto.ResponseOrder;
 import me.june.userservice.user.dto.UserDto;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
@@ -71,9 +73,11 @@ public class UserService implements UserDetailsService {
 //		List<ResponseOrder> responseOrders = orderServiceClient.getOrders(userId);
 
 		// CircuitBreaker
+		log.info("Before call order msa");
 		CircuitBreaker circuitbreaker = circuitBreakerFactory.create("circuitbreaker");
 		List<ResponseOrder> responseOrders = circuitbreaker.run(() -> orderServiceClient.getOrders(userId),
 			throwable -> new ArrayList<>());
+		log.info("After call order msa");
 
 		userDto.setOrders(responseOrders);
 		return userDto;

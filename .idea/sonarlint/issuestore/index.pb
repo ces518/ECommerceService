@@ -171,8 +171,6 @@ q
 AUserService/src/main/java/me/june/userservice/PingController.java,e/5/e51ef57f0b9ace5daf7ef1f624a283adbe2ffb9a
 ‹
 [APIGatewayService/src/main/java/me/june/apigatewayservice/ApiGatewayServiceApplication.java,e/2/e24f69a71a7c9cfb0d6151152a44a74854b37fc4
-I
-APIGatewayService/pom.xml,0/6/068a445cf463676b351d5dbac7fa835143a2bb23
 D
 ConfigServer/pom.xml,f/9/f958ddb088957bc0c87d7e6dda703cb85f539043
 s
