@@ -55,7 +55,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, busrefresh # Actuator 를 활성화 시킬 End-Point 설정
+        include: refresh, health, beans, busrefresh, info, prometheus, metrics # Actuator 를 활성화 시킬 End-Point 설정
 
 logging:
   level:

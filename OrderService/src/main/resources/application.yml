@@ -34,3 +34,7 @@ eureka:
 logging:
   level:
     me.june.orderservice: DEBUG
+
+management.endpoints.web:
+  exposure:
+    include: health, httprace, info, metrics, prometheus

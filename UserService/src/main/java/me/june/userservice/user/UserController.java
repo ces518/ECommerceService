@@ -1,5 +1,6 @@
 package me.june.userservice.user;
 
+import io.micrometer.core.annotation.Timed;
 import lombok.RequiredArgsConstructor;
 import me.june.userservice.user.dto.ResponseUser;
 import me.june.userservice.user.dto.UserDto;
@@ -31,6 +32,7 @@ public class UserController {
 	private final ModelMapper mapper;
 
 	@GetMapping("/welcome")
+	@Timed(value = "user.welcome", longTask = true)
 	public String welcome() {
 		return env.getProperty("greeting.message");
 	}
