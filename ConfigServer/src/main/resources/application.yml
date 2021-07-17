@@ -16,8 +16,8 @@ spring:
       server:
         native:
           search-locations: file://${user.home}/work/native/file-repo # Native File Repo 를 사용할 경우 설정
-#        git:
-#          uri: file:///Users/kakaocommerce/work/git-local-repo
+        git:
+          uri: file:///Users/kakaocommerce/work/git-local-repo
 
 management:
   endpoints:
