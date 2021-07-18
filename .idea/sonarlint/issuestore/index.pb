@@ -213,8 +213,6 @@ KUserService/src/main/java/me/june/userservice/user/service/UserService.java,1/
 LUserService/src/main/java/me/june/userservice/config/Resilience4JConfig.java,5/b/5be3957d363db7ef222d535b1520e34cf39efb7e
 D
 OrderService/pom.xml,1/2/12abbeb2e5453dbf79241135f537213dffc9bbfa
-I
-APIGatewayService/pom.xml,0/6/068a445cf463676b351d5dbac7fa835143a2bb23
 v
 FUserService/src/main/java/me/june/userservice/user/UserController.java,9/5/9572d13bfaa1a8f7a2520ee9a0744c11c1161e67
 y
