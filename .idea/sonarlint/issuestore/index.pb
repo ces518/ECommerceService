@@ -223,3 +223,7 @@ IUserService/src/main/java/me/june/userservice/UserServiceApplication.java,9/e/
 LOrderService/src/main/java/me/june/orderservice/OrderServiceApplication.java,3/7/372f97bbf415a14846d1286ae6a1b622b2475e37
 ‹
 [APIGatewayService/src/main/java/me/june/apigatewayservice/ApiGatewayServiceApplication.java,e/2/e24f69a71a7c9cfb0d6151152a44a74854b37fc4
+F
+UserService/Dockerfile,1/b/1b59455d1b07a0125fd9fbf2713699b971e10137
+C
+UserService/pom.xml,f/f/ffddcbafce9a6aa210161d0474661eebdc6c48b5

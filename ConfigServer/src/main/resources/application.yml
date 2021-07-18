@@ -13,11 +13,12 @@ spring:
     password: guest
   cloud:
     config:
-      server:
-        native:
-          search-locations: file://${user.home}/work/native/file-repo # Native File Repo 를 사용할 경우 설정
-        git:
-          uri: file:///Users/kakaocommerce/work/git-local-repo
+#      server:
+#        native:
+#          search-locations: file://${user.home}/work/native/file-repo # Native File Repo 를 사용할 경우 설정
+        server:
+          git:
+            uri: https://github.com/ces518/spring-cloud-config-repository
 
 management:
   endpoints:
